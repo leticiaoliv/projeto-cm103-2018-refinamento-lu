@@ -9,7 +9,6 @@ function declupivot(A::Matrix; diagtol = 1e-12)
     n = size(A, 2)
     p = collect(1:n)
     for j = 1:n-1
-        # Quem é o pivô
         pivo, k = abs(A[j,j]), j
         for i = j+1:n
             if abs(A[i,j]) > pivo
